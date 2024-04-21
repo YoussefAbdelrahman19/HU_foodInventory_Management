@@ -1,0 +1,33 @@
+/* navbar.module.css */
+
+.navbar-brand {
+    font-size: 1.5rem; /* Larger brand font */
+    margin-right: 1rem; /* Space after brand */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Larger nav item fonts */
+    margin-right: 0.5rem; /* Space between nav items */
+  }
+  
+  .navbar-toggler {
+    border: none; /* Remove border */
+  }
+  
+  /* Customize dropdown menu */
+  .nav-dropdown-menu {
+    font-size: 1.2rem; /* Larger dropdown fonts */
+  }
+  
+  /* Add custom styles for collapsed menu in smaller screens */
+  @media (max-width: 991px) {
+    .navbar-nav .nav-link {
+      margin: 0.5rem 0; /* Vertical spacing for collapsed items */
+    }
+  }
+  
+  /* Ensure adequate padding and margins for all nav elements */
+  .navbar {
+    padding: 1rem; /* Padding around navbar */
+  }
+  

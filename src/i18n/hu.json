@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "brand": "Ételkezelés",
+    "products": "Termékek",
+    "suppliers": "Beszállítók",
+    "customers": "Vevők",
+    "orders": "Rendelések",
+    "delivery_notes": "Szállítói Megjegyzések",
+    "incoming_goods": "Érkező áru",
+    "language": "Nyelv",
+    "english": "Angol",
+    "hungarian": "Magyar"
+  }
+}

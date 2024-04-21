@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "brand": "Food Management",
+    "products": "Products",
+    "suppliers": "Suppliers",
+    "customers": "Customers",
+    "orders": "Orders",
+    "delivery_notes": "Delivery Notes",
+    "incoming_goods": "Incoming Goods",
+    "language": "Language",
+    "english": "English",
+    "hungarian": "Hungarian"
+  }
+}
