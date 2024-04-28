@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "1118a471-fde1-405c-a955-5537e6c071b0",
+		"name": "apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11009364"
+	},
+	"item": [
+		{
+			"name": "suppliers",
+			"item": [
+				{
+					"name": "insert one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertOne\",\n    \"data\": {\n        \"supplierId\": \"1\",\n        \"supplierName\": \"Example Supplier\",\n        \"address\": \"123 Main Street, Anytown, USA\",\n        \"ownerEmail\": \"owner@example.com\",\n        \"phoneNumber\": \"123-456-7890\",\n        \"ownerPhoneNumber\": \"098-765-4321\",\n        \"email\": \"info@example.com\",\n        \"vat\": \"123456789\",\n        \"euVat\": \"EU123456789\",\n        \"bankAccount\": \"0123456789\",\n        \"paymentMethod\": \"Bank Transfer\",\n        \"paymentCurrency\": \"USD\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"getAll\",\n    \"data\":{}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"getOne\",\n    \"data\":{\n        \"supplierName\":\"Example\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/suppliers",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "createIncoomingOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"createIncoomingOrder\",\n    \"data\": {\n        \"supplierId\": \"tgLDzzYvZK\",\n        \"arrivalDate\": \"2024-04-27T21:39:02.116Z\",\n        \"expirationDate\":\"2024-04-27T21:39:02.116Z\",\n        \"paymentMethod\": \"VISA\",\n        \"paymentCurrency\": \"EUR\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getIncoomingOder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"getIncoomingOder\",\n    \"data\": {\n        \"supplierId\": \"tgLDzzYvZK\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getIncoomingOrderById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"getIncoomingOrderById\",\n    \"data\": {\n        \"orderId\": \"XogtJKTArn\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/orders",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createIncoomingOrderItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"createIncoomingOrderItem\",\n    \"data\": {\n        \"itemName\": \"xcv\",\n        \"lotNum\": 120,\n        \"warehouse\": \"A12\",\n        \"weightUnit\": \"kg\",\n        \"weightQuantity\": 120,\n        \"price\": 123,\n        \"orderId\":\"XogtJKTArn\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/order-items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"order-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getIncoomingOrderItemsByOrderId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"getIncoomingOrderItemsByOrderId\",\n    \"data\": {\n        \"orderId\":\"XogtJKTArn\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/order-items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"order-items"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": []
+		},
+		{
+			"name": "admin",
+			"item": []
+		},
+		{
+			"name": "employees",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"mahmoud\",\n    \"password\":\"123\",\n    \"role\":\"super_admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"youssef\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employees/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employees",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lookups",
+			"item": [
+				{
+					"name": "insert lookupGroup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookupGroup\",\n    \"data\":{\n        \"groupName\":\"meat\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert lookup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookup\",\n    \"data\":{\n        \"lookupName\":\"beef\",\n        \"lookupGroupId\":\"BLjhpT1YRM\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert lookupDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookupDetail\",\n    \"data\":{\n        \"lookupDetailName\":\"leg\",\n        \"lookupParentCode\":\"qIBVhovI4mss\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get lookupGroup",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookupGroup\",\n    \"data\":{\n        \"groupName\":\"meat\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups/lookupGroup",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups",
+								"lookupGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get lookups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookupGroup\",\n    \"data\":{\n        \"groupName\":\"meat\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups/lookup?id=BLjhpT1YRM",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups",
+								"lookup"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "BLjhpT1YRM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get lookupDetails",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\":\"insertLookupGroup\",\n    \"data\":{\n        \"groupName\":\"meat\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/lookups/lookupDetail?id=lzKQWnE_x5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"lookups",
+								"lookupDetail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "lzKQWnE_x5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
